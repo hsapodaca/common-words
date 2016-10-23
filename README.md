@@ -3,11 +3,34 @@ Common Words
 
 A comparison of various solutions to find most frequently-used words in a book.
 
-As an example, I'm using the original copy of [The Canterbury Tales by Geoffrey Chaucer](http://www.gutenberg.org/ebooks/2383):
+As an example, I'm using the original copy of [The Canterbury Tales by Geoffrey Chaucer](http://www.gutenberg.org/ebooks/2383) without the notes:
 
 ```bash
 wget -O canterbury-tales.txt http://www.gutenberg.org/cache/epub/2383/pg2383.txt 
 ```
+
+Scala
+-----
+
+[CommonWords.scala](src/main/scala/org/commonwords/CommonWords.scala)
+
+    sbt run
+
+Output:
+
+```
+11918 and
+11072 the
+7843 of
+6466 that
+5972 to
+5138 in
+4305 a
+4089 he
+4025 i
+3685 his
+```
+
 
 Bash
 ----
@@ -57,26 +80,5 @@ Results:
 3643 I
 ```
 
-Scala
------
 
-[CommonWords.scala](src/main/scala/org/commonwords/CommonWords.scala)
-
-    sbt run
-
-Output:
-
-```
-11918 and
-11072 the
-7843 of
-6466 that
-5972 to
-5138 in
-4305 a
-4089 he
-4025 i
-3685 his
-```
-
-As you can see from the examples, English language may change overtime but its most common words tend stay the same.
+As you can see from the examples, English language may change overtime but its most common words tend to stay the same.
