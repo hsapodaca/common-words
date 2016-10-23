@@ -60,7 +60,7 @@ Results:
 Scala
 -----
 
-[CommonWords.scala](common-words/blob/master/src/main/scala/org/commonwords/CommonWords.scala)
+[CommonWords.scala](src/main/scala/org/commonwords/CommonWords.scala)
 
     sbt run
 
