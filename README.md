@@ -40,21 +40,21 @@ SQL
 ```sql
     CREATE TABLE words (word varchar(30) NOT NULL, KEY word (word) USING BTREE);
     LOAD DATA LOCAL INFILE 'canterbury-tales.csv' INTO TABLE words LINES TERMINATED BY ' ';
-    SELECT count(*) c, word FROM test.words GROUP BY word ORDER BY c DESC LIMIT 10;
+    SELECT count(*) c, word FROM words GROUP BY word ORDER BY c DESC LIMIT 10;
 ```
 
 Results:
 ```
-11918 and
-11072 the
-7843 of
-6466 that
-5972 to
-5138 in
-4305 a
-4089 he
-4025 i
-3685 his
+11563 And
+10810 THE
+7726 of
+6219 that
+5772 to
+4917 in
+4167 a
+3667 he
+3658 his
+3643 I
 ```
 
 Scala
