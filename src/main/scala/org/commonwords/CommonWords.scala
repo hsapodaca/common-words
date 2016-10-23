@@ -13,5 +13,5 @@ object CommonWords extends App {
   /* get top n most used words and the count of their usages */
   def topWords = words.groupBy(w => w).mapValues(_.size).toList.sortBy(-_._2).take(numOfWords)
 
-  println (topWords)
+  topWords.map(w => s"${w._2} ${w._1}").foreach(println)
 }

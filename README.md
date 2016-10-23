@@ -40,33 +40,43 @@ SQL
 ```sql
     CREATE TABLE words (word varchar(30) NOT NULL, KEY word (word) USING BTREE);
     LOAD DATA LOCAL INFILE 'canterbury-tales.csv' INTO TABLE words LINES TERMINATED BY ' ';
-    SELECT word, count(*) c FROM test.words GROUP BY word ORDER BY c DESC LIMIT 10;
+    SELECT count(*) c, word FROM test.words GROUP BY word ORDER BY c DESC LIMIT 10;
 ```
 
 Results:
 ```
-and     11918
-the     11072
-of      7843
-that    6466
-to      5972
-in      5138
-a       4305
-he      4089
-i       4025
-his     3685
+11918 and
+11072 the
+7843 of
+6466 that
+5972 to
+5138 in
+4305 a
+4089 he
+4025 i
+3685 his
 ```
 
 Scala
 -----
 
-[CommonWords.scala](./src/org/commonwords/CommonWords.scala)
+[CommonWords.scala](common-words/blob/master/src/main/scala/org/commonwords/CommonWords.scala)
 
     sbt run
 
 Output:
 
-    List((and,11918), (the,11072), (of,7843), (that,6466), (to,5972))
+```
+11918 and
+11072 the
+7843 of
+6466 that
+5972 to
+5138 in
+4305 a
+4089 he
+4025 i
+3685 his
+```
 
-
-As you can see, English language may change overtime but its most common words tend stay the same.
+As you can see from the examples, English language may change overtime but its most common words tend stay the same.
